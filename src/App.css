@@ -1,0 +1,10 @@
+.MuiPaginationItem-root {
+      color: white!important;         
+    }
+
+.MuiTab-root {
+          color: #aaa!important;
+        }
+.Mui-selected {
+    color: #fff!important;
+}
