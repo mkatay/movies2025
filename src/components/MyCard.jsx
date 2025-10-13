@@ -7,9 +7,11 @@ import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import { img_300, noImage } from '../utils';
+import { MyModal } from './MyModal';
 
-export const MyCard=({backdrop_path,original_title,release_date,vote_average,original_name,first_air_date})=>{
-    const voteStyle={
+export const MyCard=({id,backdrop_path,original_title,release_date,vote_average,original_name,first_air_date})=>{
+   const [open, setOpen] = React.useState(false);  
+  const voteStyle={
         position:'absolute',
         top:115,right:10,
         width:'30px',
@@ -24,7 +26,9 @@ export const MyCard=({backdrop_path,original_title,release_date,vote_average,ori
         fontSize:'0.8rem'
     }
   return (
-    <Card sx={{ width: 300,position:'relative',background:'#243B55',color:'white' }}>
+    <>
+    <Card onClick={() => setOpen(true)}
+      sx={{ width: 300,position:'relative',background:'#243B55',color:'white' }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -43,5 +47,7 @@ export const MyCard=({backdrop_path,original_title,release_date,vote_average,ori
         </CardContent>
       </CardActionArea>
     </Card>
+    {open && <MyModal id={id} type='movie' setOpen={setOpen} open={open}/>}
+    </>
   );
 }

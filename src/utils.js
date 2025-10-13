@@ -26,6 +26,10 @@ export const getSearchedData=async ({queryKey})=>{
     return resp.data
 }
 
+export const getDetailsData=async ({queryKey})=>{
+    const resp=await axios.get(queryKey[1])
+    return resp.data
+}
 
 export const img_300='https://image.tmdb.org/t/p/w300';
 export const img_500='https://image.tmdb.org/t/p/w500';  

@@ -8,3 +8,18 @@
 .Mui-selected {
     color: #fff!important;
 }
+.carousel_img{
+  max-width: 60px;
+  height: auto;
+
+
+}
+.slick-list{
+  background-color: red;
+}
+button.slick-arrow.slick-next{
+  color: blue!important;
+}
+.MuiBox-root.css-mn3qa8{
+  background-color: yellow;
+}
